@@ -82,7 +82,7 @@ const StartMenu = () => {
       </div>
       <div
         className={styles.startButton}
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={() => setMenuOpen(v => !v)}
         tabIndex='1'
       ></div>
       <div className={styles.infoWidget}>

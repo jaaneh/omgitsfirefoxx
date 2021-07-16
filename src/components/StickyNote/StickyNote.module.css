@@ -4,10 +4,11 @@
   background-color: yellow;
   width: 300px;
   height: 300px;
-  left: 50%;
+  left: 40%;
   top: 50%;
   box-shadow: 3px 5px 3px 3px rgb(0 0 0 / 30%);
-  font-family: "Comic Sans MS", "ComicSansMS", "MarkerFelt", "MarkerFelt-Thin", "Helvetica Neue Rounded", "Helvetica Rounded", "Helvetica Neue", sans-serif;
+  font-family: 'Comic Sans MS', 'ComicSansMS', 'MarkerFelt', 'MarkerFelt-Thin',
+    'Helvetica Neue Rounded', 'Helvetica Rounded', 'Helvetica Neue', sans-serif;
   font-size: 28px;
   padding: 5px;
   overflow: hidden;

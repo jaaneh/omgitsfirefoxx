@@ -3,7 +3,7 @@
     "baseUrl": "src",
     "paths": {
       "@components/*": ["components/*"],
-      "@utils/*": ["utils/*"]
+      "@context/*": ["context/*"]
     }
   },
   "include": ["**/*.js", "**/*.jsx"],
