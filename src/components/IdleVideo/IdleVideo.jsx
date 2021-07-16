@@ -5,7 +5,7 @@ import styles from './IdleVideo.module.css'
 
 const IdleVideo = () => {
   const [visible, setVisible] = useState(false)
-  const IDLE_TIMEOUT = 5000
+  const IDLE_TIMEOUT = 90000
 
   const handleOnActive = () => setVisible(false)
   const handleOnIdle = () => setVisible(true)
