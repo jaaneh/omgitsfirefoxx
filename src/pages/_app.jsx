@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
 
 import StateContext from '@context/StateContext'
+import SEO from '../../next-seo.config'
 
 // import '98.css'
 import '../styles/globals.css'
@@ -18,9 +19,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        <title>omgitsfirefoxx</title>
-      </Head>
       <StateContext.Provider
         value={{
           emailOpen,
@@ -41,6 +39,7 @@ function MyApp({ Component, pageProps }) {
           setJazzOpen
         }}
       >
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </StateContext.Provider>
     </>
