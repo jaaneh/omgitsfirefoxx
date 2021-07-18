@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-import styles from './StickyNote.module.css'
+import s from './StickyNote.module.css'
 
 const StickyNote = ({ constraintsRef }) => {
   const [showNote, setShowNote] = useState(true)
@@ -14,16 +14,16 @@ const StickyNote = ({ constraintsRef }) => {
       dragTransition={{
         power: 0
       }}
-      className={styles.stickyWrapper}
+      className={s.stickyWrapper}
       style={{
         display: showNote ? 'block' : 'none'
       }}
     >
-      <button className={styles.stickyClose} onClick={() => setShowNote(false)}>
+      <button className={s.stickyClose} onClick={() => setShowNote(false)}>
         X
       </button>
       <span
-        className={styles.stickyNote}
+        className={s.stickyNote}
         contentEditable={true}
         suppressContentEditableWarning={true}
       >

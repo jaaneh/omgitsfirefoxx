@@ -8,8 +8,13 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const [emailOpen, setEmailOpen] = useState(false)
-  const [sizzleOpen, setSizzleOpen] = useState(false)
+  const [photosOpen, setPhotosOpen] = useState(false)
   const [aboutOpen, setAboutOpen] = useState(false)
+  const [wolf3dOpen, setWolf3dOpen] = useState(false)
+  const [dialUpOpen, setDialUpOpen] = useState(false)
+  const [sizzleOpen, setSizzleOpen] = useState(false)
+  const [chatOpen, setChatOpen] = useState(false)
+  const [jazzOpen, setJazzOpen] = useState(false)
 
   return (
     <>
@@ -20,10 +25,20 @@ function MyApp({ Component, pageProps }) {
         value={{
           emailOpen,
           setEmailOpen,
+          photosOpen,
+          setPhotosOpen,
+          aboutOpen,
+          setAboutOpen,
+          wolf3dOpen,
+          setWolf3dOpen,
+          dialUpOpen,
+          setDialUpOpen,
           sizzleOpen,
           setSizzleOpen,
-          aboutOpen,
-          setAboutOpen
+          chatOpen,
+          setChatOpen,
+          jazzOpen,
+          setJazzOpen
         }}
       >
         <Component {...pageProps} />

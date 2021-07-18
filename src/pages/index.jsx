@@ -5,24 +5,47 @@ import StickyNote from '@components/StickyNote'
 import StartMenu from '@components/StartMenu'
 import IconArea from '@components/IconArea'
 import IdleVideo from '@components/IdleVideo'
-import { EmailWindow, SizzleWindow, AboutMeWindow } from '@components/Window'
+import {
+  EmailWindow,
+  PhotosAndHeadshotsWindow,
+  AboutMeWindow,
+  Wolf3dWindow,
+  DialUpWindow,
+  SizzleWindow,
+  ChatWindow,
+  JazzWindow
+} from '@components/Windows'
 
 import StateContext from '@context/StateContext'
 
-import styles from '../styles/Index.module.css'
+import s from '../styles/Index.module.css'
 
 const Index = () => {
-  const { emailOpen, sizzleOpen, aboutOpen } = useContext(StateContext)
+  const {
+    emailOpen,
+    photosOpen,
+    aboutOpen,
+    wolf3dOpen,
+    dialUpOpen,
+    sizzleOpen,
+    chatOpen,
+    jazzOpen
+  } = useContext(StateContext)
   const constraintsRef = useRef(null)
 
   return (
     <>
       <IdleVideo />
       <Layout>
-        <div className={styles.constraintsArea} ref={constraintsRef}></div>
+        <div className={s.constraintsArea} ref={constraintsRef}></div>
         {emailOpen && <EmailWindow constraintsRef={constraintsRef} />}
-        {sizzleOpen && <SizzleWindow constraintsRef={constraintsRef} />}
+        {photosOpen && <PhotosAndHeadshotsWindow constraintsRef={constraintsRef} />}
         {aboutOpen && <AboutMeWindow constraintsRef={constraintsRef} />}
+        {wolf3dOpen && <Wolf3dWindow constraintsRef={constraintsRef} />}
+        {dialUpOpen && <DialUpWindow constraintsRef={constraintsRef} />}
+        {sizzleOpen && <SizzleWindow constraintsRef={constraintsRef} />}
+        {chatOpen && <ChatWindow constraintsRef={constraintsRef} />}
+        {jazzOpen && <JazzWindow constraintsRef={constraintsRef} />}
         <IconArea constraintsRef={constraintsRef} />
         <StickyNote constraintsRef={constraintsRef} />
         <StartMenu />

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useIdleTimer } from 'react-idle-timer'
 
-import styles from './IdleVideo.module.css'
+import s from './IdleVideo.module.css'
 
 const IdleVideo = () => {
   const [visible, setVisible] = useState(false)
@@ -32,9 +32,9 @@ const IdleVideo = () => {
   })
 
   return (
-    <div className={styles.screenSaver} style={{ display: visible ? 'block' : 'none' }}>
+    <div className={s.screenSaver} style={{ display: visible ? 'block' : 'none' }}>
       <video
-        className={styles.screenSaverVideo}
+        className={s.screenSaverVideo}
         src='screensaver.mp4'
         autoPlay={true}
         loop={true}

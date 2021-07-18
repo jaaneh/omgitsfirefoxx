@@ -1,7 +1,7 @@
-import styles from './Layout.module.css'
+import s from './Layout.module.css'
 
 const Layout = ({ children }) => {
-  return <div className={styles.desktop}>{children}</div>
+  return <div className={s.desktop}>{children}</div>
 }
 
 export default Layout

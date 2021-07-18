@@ -3,14 +3,23 @@ import { motion } from 'framer-motion'
 
 import StateContext from '@context/StateContext'
 
-import styles from './IconArea.module.css'
+import s from './IconArea.module.css'
 
 function openInNewTab(url) {
   window.open(url, '_blank', 'noopener, noreferrer')
 }
 
 const IconArea = ({ constraintsRef }) => {
-  const { setEmailOpen, setSizzleOpen, setAboutOpen } = useContext(StateContext)
+  const {
+    setEmailOpen,
+    setPhotosOpen,
+    setAboutOpen,
+    setWolf3dOpen,
+    setDialUpOpen,
+    setSizzleOpen,
+    setChatOpen,
+    setJazzOpen
+  } = useContext(StateContext)
 
   const icons = [
     {
@@ -21,7 +30,7 @@ const IconArea = ({ constraintsRef }) => {
     {
       text: 'Photos & Headshots',
       logoSrc: 'folder',
-      onDoubleClick: null
+      onDoubleClick: () => setPhotosOpen(true)
     },
     {
       text: 'aboutMe.txt',
@@ -41,12 +50,12 @@ const IconArea = ({ constraintsRef }) => {
     {
       text: 'wolf3d.exe',
       logoSrc: 'wolfenstein',
-      onDoubleClick: null
+      onDoubleClick: () => setWolf3dOpen(true)
     },
     {
       text: 'Dial-Up Networking',
       logoSrc: 'dialup',
-      onDoubleClick: null
+      onDoubleClick: () => setDialUpOpen(true)
     },
     {
       text: 'Twitch.html',
@@ -66,17 +75,17 @@ const IconArea = ({ constraintsRef }) => {
     {
       text: 'Chat.exe',
       logoSrc: 'aimlogo',
-      onDoubleClick: null
+      onDoubleClick: () => setChatOpen(true)
     },
     {
       text: 'JAZZ.exe',
       logoSrc: 'jazzj',
-      onDoubleClick: null
+      onDoubleClick: () => setJazzOpen(true)
     }
   ]
 
   return (
-    <div className={styles.iconArea}>
+    <div className={s.iconArea}>
       {icons.map((icon, index) => (
         <motion.div
           key={index}
@@ -87,16 +96,16 @@ const IconArea = ({ constraintsRef }) => {
           dragTransition={{
             power: 0
           }}
-          className={styles.iconBlock}
+          className={s.iconBlock}
           onDoubleClick={icon.onDoubleClick}
         >
           <img
-            className={styles.iconImg}
+            className={s.iconImg}
             src={`images/${icon.logoSrc}.png`}
             alt={icon.text}
             draggable='false'
           />
-          <div className={styles.iconText}>{icon.text}</div>
+          <div className={s.iconText}>{icon.text}</div>
         </motion.div>
       ))}
     </div>
