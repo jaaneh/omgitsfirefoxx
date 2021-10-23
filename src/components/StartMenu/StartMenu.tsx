@@ -6,7 +6,7 @@ import s from './StartMenu.module.css'
 const StartMenu = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [time, setTime] = useState('12:00 AM')
-  const node = useRef()
+  const node = useRef(null)
 
   const updateTime = () => setTime(format(new Date(), 'h:m a'))
 
@@ -80,7 +80,7 @@ const StartMenu = (): JSX.Element => {
       <div
         className={s.startButton}
         onClick={() => setMenuOpen(v => !v)}
-        tabIndex='1'
+        tabIndex={1}
       ></div>
       <div className={s.infoWidget}>
         <div className={s.info}></div>

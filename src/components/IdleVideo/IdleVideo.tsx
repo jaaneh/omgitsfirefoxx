@@ -5,8 +5,8 @@ import s from './IdleVideo.module.css'
 
 const IdleVideo = (): JSX.Element => {
   const [visible, setVisible] = useState(false)
-  // const IDLE_TIMEOUT = 90000
-  const IDLE_TIMEOUT = 9000000
+  const IDLE_TIMEOUT = 90000
+  // const IDLE_TIMEOUT = 9000000
 
   const handleOnActive = () => setVisible(false)
   const handleOnIdle = () => setVisible(true)
