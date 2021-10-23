@@ -35,6 +35,20 @@
   vertical-align: super;
   user-select: none;
 }
+.button {
+  display: inline-block;
+  padding: 4px;
+  text-align: center;
+  font-family: sans-serif;
+  box-sizing: content-box;
+  border-top: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  box-shadow: -1px -1px white;
+  box-shadow: 1px 1px black;
+  background-color: #cccccc;
+}
 .windowButton {
   display: inline-block;
   padding: 0;
@@ -66,6 +80,15 @@
   border-right: 1px solid white;
   border-bottom: 1px solid white;
 }
+.button:active {
+  outline: none;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  box-shadow: 1px 1px white;
+  box-shadow: -1px -1px black;
+}
 .windowBody {
   margin: 1px;
   font-size: 12px;
@@ -76,4 +99,22 @@
 .aboutMe {
   height: calc(100vh - 50px);
   width: 50vw;
+}
+.textInput {
+  width: 150px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 14px;
+  border-left: solid 1px black;
+  border-top: solid 1px black;
+  border-right: solid 1px white;
+  border-bottom: solid 1px white;
+  box-shadow: inset -1px -1px #c5c5c5, inset 1px 1px #7e7f81;
+  resize: none;
+}
+.chatFormWrapper {
+  margin-bottom: 16px;
+}
+.chatLoginImage {
+  padding: 16px 0;
 }

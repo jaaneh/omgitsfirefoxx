@@ -7,8 +7,7 @@
 - [x] aboutMe.txt
   - TODO: Change s3 endpoint
 - [x] Instagram.exe
-- [x] YouTube.html
-- [ ] wolf3d.exe
+- [x] wolf3d.exe
 - [ ] Dial-Up Networking
 - [x] Twitch.html
 - [x] Twitter.html
@@ -21,7 +20,6 @@
 - [ ] Email
 - [ ] Photos & Headshots
 - [x] Instagram
-- [x] YouTube
 - [x] Twitch
 - [x] Twitter
 - [ ] Run

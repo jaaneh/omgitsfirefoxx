@@ -1,4 +1,10 @@
-module.exports = {
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+
+const nextConfig = {
   webpack(config, { buildId, dev, isServer, defaultLoaders, webpack }) {
     config.module.rules[2].oneOf.forEach((moduleLoader, i) => {
       Array.isArray(moduleLoader.use) &&
@@ -25,3 +31,5 @@ module.exports = {
     ignoreDuringBuilds: true
   }
 }
+
+module.exports = nextConfig
